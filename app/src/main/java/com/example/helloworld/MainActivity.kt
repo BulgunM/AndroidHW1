@@ -18,7 +18,8 @@ class MainActivity : AppCompatActivity() {
             binding.status.text = "$averageStatus ${50 - counter}"
             binding.counter.text = counter.toString()
             binding.status.setTextColor(getColorStateList(R.color.blue))
-            if (counter >= 50) {
+            if (counter == 50) {
+                binding.plus.isEnabled = false
                 binding.status.text = getText(R.string.warning_status)
                 binding.reset.visibility = View.VISIBLE
                 binding.status.setTextColor(getColorStateList(R.color.red))
